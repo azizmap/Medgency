@@ -63,10 +63,19 @@
                 <a class="nav-link" href="<?= site_url('user/home') ?>">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="<?= site_url('user/liatprofile') ?>">View Profile</a>
+                <a class="nav-link" href="<?= site_url('user/liatprofile') ?>">Profile</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="<?= site_url('user/riwayat') ?>">Riwayat</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link"  href="http://localhost/Medgency/index.php/user/getBooking">Your Booking</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="<?= site_url('user/article') ?>">Article</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="<?= site_url('user/aboutUs') ?>">About</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="<?= site_url('user/logout') ?>">Logout</a>
@@ -75,6 +84,7 @@
             </div>
         </div>
       </nav>
+      
       <!-- akhir navbar -->
 
     <!-- Optional JavaScript -->
