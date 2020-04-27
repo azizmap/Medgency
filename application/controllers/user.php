@@ -121,6 +121,7 @@ class  User extends CI_Controller {
 	public function showMitra_rs()
 	{
 		$data['mitra'] = $this->m_user->liatmitra_rs();
+		$data['nama'] = "Rumah sakit";
 		$this->load->view('header');
 		$this->load->view('show_mitra', $data);
 		$this->load->view('footer');
@@ -129,6 +130,7 @@ class  User extends CI_Controller {
 	public function showMitra_c()
 	{
 		$data['mitra'] = $this->m_user->liatmitra_c();
+		$data['nama'] = "Klinik";
 		$this->load->view('header');
 		$this->load->view('show_mitra', $data);
 		$this->load->view('footer');
@@ -228,6 +230,14 @@ class  User extends CI_Controller {
 		// else{
 		// 	echo '<script>alert("Anda sedang tidak membooking dokter, silahkan pesan");</script>';
 		// }
+	}
+	public function check_username_ada(){
+		if($this->m_user->cari_id($_POST['username'])->num_rows()>0){
+			echo '<label class="text-danger"><span class ="glyphicon glyphicon-remove"></span>Username Already Used</label>';
+		}
+		else{
+			echo '<label class="text-success"><span class ="glyphicon glyphicon-ok"></span>Username Available</label>';
+		}
 	}
 }
 ?>
